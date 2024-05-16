@@ -11,6 +11,7 @@ services:
   backend:
     build: ./backend #Path to Dockerfile
     container_name: backend
+    image: backend:node
     ports:
       - '5000:5000'
     volumes:
@@ -25,6 +26,7 @@ services:
   frontend:
     build: ./frontend
     container_name: frontend
+    image: frontend:react
     ports:
       - '3000:3000'
     volumes:
